@@ -1,2 +1,8 @@
 .vscode
 .venv
+dist
+build
+output
+main
+main.spec
+autoclicker
