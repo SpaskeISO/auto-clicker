@@ -39,17 +39,15 @@ def auto_clicker():
                     if application_location is not None:
                         # Click on the launcher download button if found
                         pyautogui.click(application_location.left + 5, application_location.top + 5)
-                        print(f"Image found. Going to next folder")
-                        time.sleep(random.uniform(2.0, 3.0))
+                        print(f"Image found.")
                         break
 
                 except pyautogui.ImageNotFoundException:
                     # Handle the exception (e.g., print a message)
                     print(f"Image not found. Going to next image in folder: {folder}")
-                    time.sleep(random.uniform(2.0, 3.0))  # Add a delay before retrying
-            else:
-                # This else block executes if no break occurs in the loop
-                print(f"Finished processing folder {folder}, moving to the next one.\n")
+
+            print(f"Finished processing folder {folder}, moving to the next one.\n")
+            time.sleep(random.uniform(2.0, 3.0))
             
 def main():
     auto_clicker()
